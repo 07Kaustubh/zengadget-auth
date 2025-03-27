@@ -102,3 +102,63 @@ export const validateFile = (file) => {
 
   return { valid: true };
 };
+
+/**
+ * Generates a URL for accessing a file
+ * @param {string} filename - Name of the file
+ * @param {string} host - Server host for URL generation
+ * @returns {string} Complete URL to access the file
+ */
+export const getFileUrl = (filename, host) => {
+  return `http://${host}/api/images/${filename}`;
+};
+
+
+/**
+ * Handle file upload with validation and security measures
+ * @param {Object} file - File object from multer or similar source
+ * @param {string} directory - Directory to save the file
+ * @param {string} [customFilename] - Optional custom filename base
+ * @returns {Promise<Object>} Result of the upload operation
+ */
+export const handleFileUpload = async (file, directory, customFilename = null) => {
+  try {
+    // Validate the file
+    const validation = validateFile(file);
+    if (!validation.valid) {
+      return { success: false, error: validation.message };
+    }
+
+    // Ensure the upload directory exists
+    await ensureUploadDir(directory);
+
+    // Generate filename (either custom or secure random)
+    let filename;
+    if (customFilename) {
+      // Get extension from original file
+      const originalExt = path.extname(file.originalname).toLowerCase();
+      // Use custom filename with original extension
+      filename = `${customFilename}${originalExt}`;
+    } else {
+      filename = generateSecureFilename(file.originalname);
+    }
+
+    // Full path where the file will be saved
+    const filepath = path.join(directory, filename);
+
+    // Save the file
+    await fs.writeFile(filepath, file.buffer);
+
+    return {
+      success: true,
+      filename,
+      path: filepath
+    };
+  } catch (error) {
+    console.error('Error handling file upload:', error);
+    return {
+      success: false,
+      error: 'Failed to process the file upload'
+    };
+  }
+};

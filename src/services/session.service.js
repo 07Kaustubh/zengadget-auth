@@ -41,7 +41,7 @@ export const storeUserSession = async (user) => {
 };
 
 // Add to your database setup
-const setupSessionCollection = async () => {
+export const setupSessionCollection = async () => {
     const db = getDb();
     await db.collection('userSessions').createIndex(
       { "lastLogin": 1 }, 
