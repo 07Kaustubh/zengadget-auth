@@ -1,0 +1,182 @@
+{
+    "gadget-categories": [
+      {
+        "category": "Tracker454656s",
+        "gadgets": [
+          {
+            "name": "Tracker-1",
+            "short-description": "Short description for Tracker-1",
+            "description": "Tracker description for Tracker-1",
+            "icon": "https://lsmedia.linker-cdn.net/282246/2023/8886920.jpeg?width=400&height=500",
+            "background_color": "custom-blue",
+            "alpha": 0.6,
+            "device_list": [
+              {
+                "id": "trx01001",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "trx01002",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "trx01003",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              }
+            ]
+          },
+          {
+            "name": "Tracker-2",
+            "short-description": "Short description for Tracker-2",
+            "description": "Tracker description for Tracker-2",
+            "icon": "https://image.made-in-china.com/202f0j00YNLbjeUCLBck/Coban-GPS-Manufacturer-Factory-Vehicle-Car-GPS-Tracker-303f-with-GPS-Tracking-System-Management-Remotely-Tracker-GPS-Car.webp",
+            "background_color": "custom-violet",
+            "alpha": 0.6,
+            "device_list": [
+              {
+                "id": "trx02001",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "trx02002",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "trx02003",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              }
+            ]
+          },
+          {
+            "name": "Tracker-3",
+            "short-description": "Short description for Tracker-3",
+            "description": "Tracker description for Tracker-3",
+            "icon": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-13942,resizemode-75,msid-107701449/top-trending-products/auto-accessories/best-gps-tracker-for-cars-to-ensure-your-safety-and-wellbeing.jpg",
+            "background_color": "custom-green",
+            "alpha": 0.6,
+            "device_list": [
+              {
+                "id": "trx03001",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "trx03002",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "trx03003",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "category": "Dash-Cams",
+        "gadgets": [
+          {
+            "name": "Camera-1",
+            "short-description": "Short description for Camera-1",
+            "description": "Camera description for Camera-1",
+            "icon": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTHgZaSNi16ydTs-K5ICdDKIe9Fn20sH9nxjTbB1YFvSQ_TP4zj9P72-IxyQayapG6c-86wAxfD",
+            "background_color": "custom-blue",
+            "alpha": "0.6",
+            "device_list": [
+              {
+                "id": "cam01001",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "cam01002",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "cam01003",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              }
+            ]
+          },
+          {
+            "name": "Camera-2",
+            "short-description": "Short description for Camera-2",
+            "description": "Camera description for Camera-2",
+            "icon": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQBh02P4QhqvBsRdORGCkbVyqmtti4-x-ApHtJjfRCXpRwV6SpM8IcGyMceIIAOgYBGXdbQJiQw",
+            "background_color": "custom-violet",
+            "alpha": "0.6",
+            "device_list": [
+              {
+                "id": "cam02001",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "cam02002",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "cam02003",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "category": "HUD",
+        "gadgets": [
+          {
+            "name": "HUD-1",
+            "short-description": "Short description for HUD-1",
+            "description": "HUD description for HUD-1",
+            "icon": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTHZJEUvcqSxvUnqaAovIuTlQD0g-7hssMZUzjMp2kVDxUL5GdZa9n3SwTZpINpdaWPbBLkU6r2bg",
+            "background_color": "custom-blue",
+            "alpha": "0.6",
+            "device_list": [
+              {
+                "id": "hud01001",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "hud01002",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

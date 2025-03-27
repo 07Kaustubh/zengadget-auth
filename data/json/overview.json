@@ -1,0 +1,36 @@
+{
+    "1010":{
+        "name": "HUD-1",
+        "category": "HUD",
+        "feature_module_name": "HUD-Feature-Module",
+        "short_description": "Short description for HUD-1 Short description for HUD-1, In the AndroidView composable, changes to state variables like isImageAnalysing do not automatically reflect because AndroidView uses an imperative API, which does not inherently recompose like other Compose UI elements. This means that state updates, such as changes to isImageAnalysing, will not trigger reinitialization or updates to the AndroidView content unless explicitly handled.",
+        "image": "/icons/device_id_1010.png",
+        "icon": "/icons/HUD-1.png",
+        "background_color": "custom-green",
+        "alpha": 0.6,
+        "device": {
+          "id": "hud01001",
+          "user": null,
+          "sub_users": [],
+          "subscription": null
+        }
+      },
+    "1011":
+    {
+        "name": "HUD-2",
+        "category": "HUD",
+        "feature_module_name": "HUD-Feature-Module",
+        "short_description": "Short description for HUD-2 Short description for HUD-2, In the AndroidView composable, changes to state variables like isImageAnalysing do not automatically reflect because AndroidView uses an imperative API, which does not inherently recompose like other Compose UI elements. This means that state updates, such as changes to isImageAnalysing, will not trigger reinitialization or updates to the AndroidView content unless explicitly handled.",
+        "image": "/icons/device_id_1010.png",
+        "icon": "/icons/HUD-1.png",
+        "background_color": "custom-green",
+        "alpha": 0.6,
+        "device": {
+          "id": "hud01001",
+          "user": null,
+          "sub_users": [],
+          "subscription": null
+        }
+      }
+    
+}

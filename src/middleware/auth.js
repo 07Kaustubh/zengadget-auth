@@ -1,4 +1,5 @@
 import { verifyJWT } from '../utils/jwt.js';
+import { getUserByUid } from '../services/user.service.js';
 
 async function authMiddleware(req, res, next) {
   try {
@@ -14,7 +15,8 @@ async function authMiddleware(req, res, next) {
     // Add user info to request object
     req.user = {
       uid: decodedToken.uid,
-      customerId: decodedToken.customerId
+      customerId: decodedToken.customerId,
+      role: decodedToken.role || 'user' // Include role from token or default to 'user'
     };
     
     next();

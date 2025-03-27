@@ -8,11 +8,11 @@ if (!process.env.JWT_SECRET_KEY) {
 const JWT_SECRET = process.env.JWT_SECRET_KEY;
 const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '1h';
 
-export const generateJWT = (uid, customerId) => {
+export const generateJWT = (uid, customerId, role = 'user') => {
   if (!JWT_SECRET) {
     throw new Error('JWT secret key is not configured');
   }
-  return jwt.sign({ uid, customerId }, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN });
+  return jwt.sign({ uid, customerId, role }, JWT_SECRET, { expiresIn: JWT_EXPIRES_IN });
 };
 
 export const verifyJWT = async (token) => {

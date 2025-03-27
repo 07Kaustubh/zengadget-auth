@@ -1,0 +1,195 @@
+{
+    "gadget_categories": [
+      {
+        "category": "Tracker454656s",
+        "gadgets": [
+          {
+            "name": "Tracker-1",
+            "module_name":"Tracker-1-Module",
+            "short-description": "Short description for Tracker-1",
+            "feature_module_name": "Tracker-1-Feature-Module",
+            "description": "Tracker description for Tracker-1",
+            "overview_img":"/icons/Tracker-1.png",
+            "icon": "/icons/Tracker-1.png",
+            "background_color": "custom-blue",
+            "alpha": 0.6,
+            "device_list": [
+              {
+                "id": "trx01001",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "trx01002",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              { 
+                "id": "trx01003",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              }
+            ]
+          },
+          {
+            "name": "Tracker-2",
+            "module_name":"Tracker-2-Module",
+            "short_description": "Short description for Tracker-2",
+            "description": "Tracker description for Tracker-2",
+            "overview_img":"/icons/Tracker-2.png",
+            "icon": "/icons/Tracker-2.png",
+            "background_color": "custom-violet",
+            "alpha": 0.6,
+            "device_list": [
+              {
+                "id": "trx02001",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "trx02002",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "trx02003",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              }
+            ]
+          },
+          {
+            "name": "Tracker-3",
+            "module_name":"Tracker-3-Module",
+            "short_description": "Short description for Tracker-3",
+            "description": "Tracker description for Tracker-3",
+            "overview_img":"/icons/Tracker-3.png",
+            "icon": "/icons/Tracker-3.png",
+            "background_color": "custom-green",
+            "alpha": 0.6,
+            "device_list": [
+              {
+                "id": "trx03001",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "trx03002",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "trx03003",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "category": "Dash-Cams",
+        "gadgets": [
+          {
+            "name": "Camera-1",
+            "module_name":"Camera-1-Module",
+            "short_description": "Short description for Camera-1",
+            "description": "Camera description for Camera-1",
+            "overview_img":"/icons/Camera-1.png",
+            "icon": "/icons/Camera-1.png",
+            "background_color": "custom-blue",
+            "alpha": "0.6",
+            "device_list": [
+              {
+                "id": "cam01001",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "cam01002",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "cam01003",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              }
+            ]
+          },
+          {
+            "name": "Camera-2",
+            "module_name":"Camera-2-Module",
+            "short_description": "Short description for Camera-2",
+            "description": "Camera description for Camera-2",
+            "overview_img":"/icons/Camera-2.png",
+            "icon": "/icons/Camera-2.png",
+            "background_color": "custom-violet",
+            "alpha": "0.6",
+            "device_list": [
+              {
+                "id": "cam02001",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "cam02002",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "cam02003",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "category": "HUD",
+        "gadgets": [
+          {
+            "name": "HUD-1",
+            "module_name":"HUD-1-Module",
+            "short_description": "Short description for HUD-1",
+            "description": "HUD description for HUD-1",
+            "overview_img":"/icons/HUD.png",
+            "icon": "/icons/HUD.png",
+            "background_color": "custom-blue",
+            "alpha": "0.6",
+            "device_list": [
+              {
+                "id": "hud01001",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              },
+              {
+                "id": "hud01002",
+                "user": null,
+                "sub_users": [],
+                "subscription": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1,11 +1,9 @@
 import admin from '../config/firebase.js';
 import { getUsersCollection } from '../config/database.js';
 import { generateJWT } from '../utils/jwt.js';
-
-// Generate a unique customer ID
-const generateCustomerId = () => {
-  return new Date().getTime().toString(36) + Math.random().toString(36).substring(2, 7);
-};
+import { generateUserId } from '../utils/idGenerator.js';
+import { storeUserSession } from './session.service.js';
+import { setAuthCookie } from '../utils/cookie.js';
 
 // Verify Firebase ID token
 const verifyToken = async (idToken) => {
@@ -18,42 +16,73 @@ const verifyToken = async (idToken) => {
   }
 };
 
-// Create a new user
-const createNewUser = async (decodedToken) => {
-  const newUser = {
-    uid: decodedToken.uid,
-    name: decodedToken.name || '',
-    email: decodedToken.email || '',
-    customerId: generateCustomerId(),
-    timestamp: new Date()
-  };
-
-  await getUsersCollection().insertOne(newUser);
-
-  return {
-    customerId: newUser.customerId,
-    accessToken: generateJWT(newUser.uid, newUser.customerId)
-  };
-};
-
 // Get existing user or create new one
-const getUserOrCreate = async (idToken) => {
+const getUserOrCreate = async (idToken, useCookie = false) => {
   try {
     const decodedToken = await verifyToken(idToken);
     const userDoc = await getUsersCollection().findOne({ uid: decodedToken.uid });
 
+    let user;
+    let token;
+
     if (userDoc) {
-      return {
-        customerId: userDoc.customerId,
-        accessToken: generateJWT(decodedToken.uid, userDoc.customerId)
-      };
+      // User exists
+      user = userDoc;
+      token = generateJWT(
+        decodedToken.uid, 
+        userDoc.customerId, 
+        userDoc.role || 'user'  // Include role in token
+      );
+      
+      // Track login session
+      await storeUserSession({
+        ...userDoc,
+        loginMethod: 'firebase'
+      });
+    } else {
+      // Create new user
+      user = await createNewUser(decodedToken);
+      token = generateJWT(
+        decodedToken.uid, 
+        user.customerId, 
+        user.role || 'user'  // Include role in token
+      );
     }
-    
-    return await createNewUser(decodedToken);
+      
+    return {
+      customerId: user.customerId,
+      role: user.role || 'user',  // Include role in response
+      accessToken: token,
+      cookieHeader: useCookie ? setAuthCookie(token) : undefined
+    };
   } catch (error) {
     console.error('Error in getUserOrCreate:', error);
     throw error;
   }
+};
+
+// Update createNewUser to include a default role
+const createNewUser = async (decodedToken) => {
+  const userId = await generateUserId();
+  
+  const newUser = {
+    uid: decodedToken.uid,
+    name: decodedToken.name || '',
+    email: decodedToken.email || '',
+    customerId: userId,
+    role: 'user',  // Default role for new users
+    timestamp: new Date()
+  };
+
+  await getUsersCollection().insertOne(newUser);
+  
+  // Track user session
+  await storeUserSession({
+    ...newUser,
+    loginMethod: 'firebase'
+  });
+
+  return newUser;
 };
 
 export {
