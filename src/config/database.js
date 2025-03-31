@@ -39,8 +39,33 @@ function getUsersCollection() {
   return usersCollection;
 }
 
+function getCategoriesCollection() {
+  return getDb().collection('categories');
+}
+
+function getCheckCollection() {
+  return getDb().collection('checks');
+}
+
+function getGadgetsCollection() {
+  return getDb().collection('gadgetsData');
+}
+
+function getDeviceCollection() {
+  return getDb().collection('devicesData');
+}
+
+function getDescriptionCollection() {
+  return getDb().collection('descriptionData');
+}
+
 export {
   connectToDatabase,
   getDb,
-  getUsersCollection
+  getUsersCollection,
+  getCategoriesCollection,
+  getCheckCollection,
+  getGadgetsCollection,
+  getDeviceCollection,
+  getDescriptionCollection
 };
